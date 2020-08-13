@@ -1,0 +1,74 @@
+<div class="row bg-blue mt-5 pt-5">
+    <div class="container">
+        <div class="row">
+            <!-- start welcome col -->
+            <div class="col-md-4 col-sm-8">
+                <h1 class="text-sm-center text-md-left text-white letters-space font-weight-light mb-4">
+                    {{'footer.titles.0' | translate}}
+                </h1>
+                <p class="text-white text-sm-center text-md-left font-weight-light">
+                    {{'footer.welcome-paragraph' | translate}}
+                </p>
+            </div>
+            <!-- end welcome col -->
+            <!-- start useful links col -->
+            <div class="col-md-2 col-sm-4">
+                <h6 class="text-sm-center text-md-left text-white font-weight-bold mb-md-4 mb-sm-2 text-nowrap">
+                    {{'footer.titles.1' | translate}}
+                </h6>
+                <ul class="list-unstyled">
+                    <li class="my-md-3 my-sm-2 text-white text-sm-center font-weight-light text-md-left text-nowrap"
+                        *ngFor="let item of 'footer.links' | translate | keyvalue">{{item.value}}</li>
+                </ul>
+            </div>
+             <!-- end useful links col -->
+              <!-- start contact us col -->
+            <div class="col-md-3 col-sm-6">
+                <h6 class="text-sm-center text-md-left text-white font-weight-bold mb-md-4 mb-sm-2 text-nowrap">
+                    {{'footer.titles.2' | translate}}
+                </h6>
+                <p class="text-white text-sm-center text-md-left mb-0">
+                    <span *ngFor="let item of 'footer.contact-us.address' | translate | keyvalue">
+                        {{item.value}} <br>
+                    </span>
+                </p>
+                <p class="text-white text-sm-center text-md-left text-nowrap mb-1"
+                   *ngFor="let item of 'footer.contact-us.info' | translate | keyvalue"><strong>{{item.key}}: </strong>
+                    {{item.value}}</p>
+                <img src="assets/images/icon/social-media.png"
+                     alt="social media icons"
+                     class="img-fluid mt-5">
+            </div>
+            <!-- end contact us col --> 
+            <!-- start NEWSLTTER us col --> 
+            <div class="col-md-3 col-sm-6">
+                <h6 class="text-sm-center text-md-left text-white font-weight-bold mb-md-4 mb-sm-2 text-nowrap">
+                    {{'footer.titles.3' | translate}}
+                </h6>
+                <p class="text-white text-sm-center text-md-left font-weight-light">
+                    {{'footer.newsltter-paragraph' | translate}}
+                </p>
+                <form class="subscribe_form mt-5">
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default text-center"
+                                    type="button"> {{'footer.newsltter-btn' | translate}}</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <!-- end NEWSLTTER us col --> 
+        </div>
+    </div>
+    <!-- start copyright us col --> 
+    <div class="col-12 copyright py-4 mt-5">
+        <div class="col-md-4 col-sm-12 mx-auto">
+            <h6 class="font-weight-light text-center text-white">
+                &copy;{{'footer.copyright' | translate}}
+            </h6>
+        </div>
+    </div>
+    <!-- end copyright us col --> 
+</div>

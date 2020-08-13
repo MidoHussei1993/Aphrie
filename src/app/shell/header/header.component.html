@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand h1 font-weight-bold ml-5"
+     href="#">Aphrie Task</a>
+  <button class="navbar-toggler navbar-toggler-right"
+          type="button"
+          aria-controls="appNavigation"
+          [attr.aria-expanded]="!isCollapsed"
+          aria-label="Toggle navigation"
+          (click)="toggleMenu()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class=" navbar-collapse" id="appNavigation"
+    [ngClass]="{'collapse': isCollapsed}"
+   [attr.ngbCollapse]="isCollapsed">
+    <ul class="navbar-nav ml-auto mr-5 pr-4">
+      <li class="nav-item mx-3    "
+          *ngFor="let item of 'header' | translate | keyvalue">
+        <a class="nav-link font-weight-bold text-sm-center"
+           href="#">{{item.value}}</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>

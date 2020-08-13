@@ -1,0 +1,445 @@
+<!-- start intro section -->
+<div class="row pb-5 pr-0">
+    <div class="col-12 bg-intro py-md-5  ">
+        <div class="row">
+            <div class="col-md-5 col-sm-12 offset-1 my-md-5">
+                <div class="col-md-12 my-md-5">
+                    <h1 class="display-4 text-white font-weight-bold mb-0">
+                        {{'intro.title.0' | translate}}
+                    </h1>
+                    <h1 class="display-4 text-primary font-weight-bold mb-0">
+                        <ins>
+                            {{'intro.title.1' | translate}}
+                        </ins>
+                    </h1>
+                    <h1 class="display-4 text-white font-weight-bold mb-0">
+                        {{'intro.title.2' | translate}}
+                    </h1>
+                </div>
+                <div class="col-md-12">
+                    <button type="button"
+                            class="btn btn-primary  mx-md-4 mt-sm-2  px-5">{{'intro.btn.start' | translate}}</button>
+                    <button type="button"
+                            class="btn btn-outline-light px-5 mt-sm-2 mx-sm-4">{{'intro.btn.services' | translate}}</button>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12  my-5 pt-5">
+                <img src="assets/images/intro-img.svg"
+                     class="img-fluid"
+                     loading="lazy"
+                     alt="intro image">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end intro section -->
+<!-- start about us section -->
+<div class="row">
+    <div class="col-md-12 col-sm-12">
+        <h4 class="text-center display-4  font-weight-bold">{{'aboutUs.title' | translate}}</h4>
+        <div class="col-md-6 col-sm-12 mx-auto">
+            <p class="text-center">{{'aboutUs.paragraph' | translate}}</p>
+        </div>
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-md-5 offset-md-1">
+        <div class="col-12">
+            <p class="">{{'aboutUs.section1.paragraph' | translate}}</p>
+        </div>
+        <div class="row"
+             *ngFor="let item of 'aboutUs.section1.list' | translate | keyvalue;let i = index">
+            <div class="col-2 pr-0">
+                <img [src]="aboutUsSechionIconsURL[i]"
+                     alt="bag photo"
+                     loading="lazy"
+                     width="70"
+                     class="img-fluid mt-4">
+            </div>
+            <div class="col-9  mt-2">
+                <h4>{{item.key}}</h4>
+                <p>{{item.value}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 col-sm-12 ">
+        <img src="assets/images/about-img.svg"
+             class="img-fluid justify-content-center"
+             loading="lazy"
+             alt="people photo">
+    </div>
+</div>
+<app-about-us-section image="assets/images/about-extra-1.svg"
+                      title="aboutUs.section2.title"
+                      paragraph="aboutUs.section2.paragraph"
+                      class="my-4"
+                      [isImageFirst]="true"></app-about-us-section>
+<app-about-us-section image="assets/images/about-extra-2.svg"
+                      title="aboutUs.section3.title"
+                      paragraph="aboutUs.section3.paragraph"
+                      [isImageFirst]="false"></app-about-us-section>
+<!-- start about us section -->
+<!-- start precedence section -->
+<div class="row mt-4 precedence">
+    <div class="col-md-12 col-sm-12 my-4">
+        <h4 class="text-center text-white display-4 my-5 font-weight-bold">{{'precedence.title' | translate}}</h4>
+        <div class="col-md-6 col-sm-12 mx-auto">
+            <p class="text-center text-white">{{'precedence.paragraph' | translate}}</p>
+        </div>
+    </div>
+    <div class="row px-5 mx-md-5">
+        <app-advantage-item
+        class="col-lg-3  col-md-12 col-sm-12 mx-auto py-3  feature rounded my-2"
+        *ngFor="let item of 'precedence.advantages' | translate | keyvalue;let i = index"
+        [key]="item.key"
+        [value]="item.value"
+        [iconUrl]="precedenceSechionIconsURL[i]"
+        [linkTilte]="'precedence.read-more'"
+        ></app-advantage-item>
+    </div>
+    <div class="row w-100 m-5 px-5">
+        <div class="col-lg-2 col-md-3 col-sm-6 mx-auto">
+            <h1 class="text-center text-white font-weight-bold">274</h1>
+            <p class="text-center text-white"><small>{{'precedence.clients' | translate}}</small></p>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 mx-auto">
+            <h1 class="text-center text-white font-weight-bold">421</h1>
+            <p class="text-center text-white"><small>{{'precedence.projects' | translate}}</small></p>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 mx-auto  ">
+            <h1 class="text-center text-white font-weight-bold">1,364</h1>
+            <p class="text-center text-white"><small>{{'precedence.hours-of-supporrt' | translate}}</small></p>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 mx-auto">
+            <h1 class="text-center text-white font-weight-bold">18</h1>
+            <p class="text-center text-white"><small>{{'precedence.hard-workers' | translate}}</small></p>
+        </div>
+    </div>
+
+</div>
+<!-- end precedence section -->
+<!-- start protfolio section -->
+<div class="row mt-4 ">
+    <div class="col-md-12 col-sm-12 my-4">
+        <h4 class="text-center display-4 mb-5  font-weight-bold">{{'protfolio.title' | translate}}</h4>
+        <div class="col-md-6 col-sm-12 mx-auto text-center">
+            <button type="button"
+                    class="btn btn-primary btn-rounded m-2 px-4"
+                    (click)="assignActiveIndex(i)"
+                    *ngFor="let item of 'protfolio.btn' | translate | keyvalue; let i=index">
+                {{item.value}}
+            </button>
+        </div>
+    </div>
+</div>
+<div class="image-container">
+    <div class="column"> 
+            <app-image-container 
+            class="fadeIn"
+            *ngIf="activeBtnIndex === 0 || activeBtnIndex === 1 "
+            imageURL="assets/images/portfolio/app1.jpg"
+            (view)="openChosenImage($event)"
+            (open)="openImageInNewTap($event)"
+            ></app-image-container>
+            <app-image-container 
+            class="fadeIn"
+            *ngIf="activeBtnIndex === 0 || activeBtnIndex === 3"
+            imageURL="assets/images/portfolio/web2.jpg"
+            (view)="openChosenImage($event)"
+            (open)="openImageInNewTap($event)"
+            ></app-image-container>
+            <app-image-container 
+            class="fadeIn"
+            *ngIf="activeBtnIndex === 0 || activeBtnIndex === 3"
+            imageURL="assets/images/portfolio/web1.jpg"
+            (view)="openChosenImage($event)"
+            (open)="openImageInNewTap($event)"
+            ></app-image-container>
+    </div>
+    <div class="column">
+        <app-image-container 
+        class="fadeIn"
+           *ngIf="activeBtnIndex === 0 || activeBtnIndex === 3"
+            imageURL="assets/images/portfolio/web3.jpg"
+            (view)="openChosenImage($event)"
+            (open)="openImageInNewTap($event)"
+            ></app-image-container>
+            <app-image-container 
+            class="fadeIn"
+            *ngIf="activeBtnIndex === 0 || activeBtnIndex === 2"
+            imageURL="assets/images/portfolio/card2.jpg"
+            (view)="openChosenImage($event)"
+            (open)="openImageInNewTap($event)"
+            ></app-image-container>
+            <app-image-container 
+            class="fadeIn"
+            *ngIf="activeBtnIndex === 0 || activeBtnIndex === 2"
+            imageURL="assets/images/portfolio/card3.jpg"
+            (view)="openChosenImage($event)"
+            (open)="openImageInNewTap($event)"
+            ></app-image-container>
+    </div>
+    <div class="column">
+        <app-image-container 
+        class="fadeIn"
+           *ngIf="activeBtnIndex === 0 || activeBtnIndex === 1"
+            imageURL="assets/images/portfolio/app2.jpg"
+            (view)="openChosenImage($event)"
+            (open)="openImageInNewTap($event)"
+            ></app-image-container>
+            <app-image-container 
+            class="fadeIn"
+            *ngIf="activeBtnIndex === 0 || activeBtnIndex === 1"
+            imageURL="assets/images/portfolio/app3.jpg"
+            (view)="openChosenImage($event)"
+            (open)="openImageInNewTap($event)"
+            ></app-image-container>
+            <app-image-container 
+            *ngIf="activeBtnIndex === 0 || activeBtnIndex === 2"
+            class="fadeIn"
+            imageURL="assets/images/portfolio/card1.jpg"
+            (view)="openChosenImage($event)"
+            (open)="openImageInNewTap($event)"
+            ></app-image-container>
+    </div>
+
+
+</div>
+<div class="viewBox "
+     *ngIf="isChosenImage"
+     (click)="closeChosenImage()">
+    <div>
+        <img [src]="chosenImageURL" [ngClass]="{'slideDown': isChosenImage , 'slideUp': !isChosenImage}">
+    </div>
+</div>
+<!-- end protfolio section -->
+<!-- start testimonials section -->
+<div class="row mt-4 bg-light-blue">
+    <div class="col-md-12 col-sm-12 my-4">
+        <h4 class="text-center display-4 mb-5  font-weight-bold">{{'testimonials.title' | translate}}</h4>
+    </div>
+    <owl-carousel-o [options]="customOptions"
+                    class="w-100">
+        <ng-template carouselSlide
+                     *ngFor="let item of users">
+            <div class="slide ">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 mx-auto">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12 text-right">
+                                <img [src]="item.avatar"
+                                     width="160"
+                                     class="rounded-circle img-fluid "
+                                     loading="lazy">
+                            </div>
+                            <div class="col-md-9 col-sm-12">
+                                <h4 class="font-weight-bolder">{{item.first_name + ' ' + item.last_name }} </h4>
+                                <p><small class="text-muted">
+                                        {{item.email }}
+                                    </small></p>
+                                <p class="lead">{{'testimonials.text' | translate}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </ng-template>
+
+    </owl-carousel-o>
+</div>
+<!-- end testimonials section -->
+<!-- start team section -->
+<div class="row mt-4 ">
+    <div class="col-md-12 col-sm-12 my-4">
+        <h4 class="text-center display-4 my-5 font-weight-bold">{{'team.title' | translate}}</h4>
+        <div class="col-md-6 col-sm-12 mx-auto">
+            <p class="text-center">{{'team.paragraph' | translate}}</p>
+        </div>
+    </div>
+    <div class="row m-5 px-5">
+        <div class="col-md-3 col-sm-12 my-2">
+            <img src="assets/images/team-1.jpg"
+                 class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-3 col-sm-12 my-2">
+            <img src="assets/images/team-2.jpg"
+                 class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-3 col-sm-12 my-2">
+            <img src="assets/images/team-3.jpg"
+                 class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-3 col-sm-12 my-2">
+            <img src="assets/images/team-4.jpg"
+                 class="img-fluid rounded-circle">
+        </div>
+    </div>
+</div>
+<!-- end team section -->
+<!-- start clients section -->
+<div class="bg-light-blue pb-5">
+
+    <div class="row mt-4  py-5">
+        <div class="col-md-12 col-sm-12">
+            <h4 class="text-center display-4  font-weight-bold">{{'clients.title' | translate}}</h4>
+            <div class="col-md-6 col-sm-12 mx-auto">
+                <p class="text-center">{{'clients.paragraph' | translate}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="d-md-flex flex-md-row flex-sm-column mx-md-5 px-md-5">
+        <div class="p-5 bg-white border text-center">
+            <img src="assets/images/clients/client-1.png"
+                 class="img-fluid">
+        </div>
+        <div class="p-5 bg-white border text-center">
+            <img src="assets/images/clients/client-2.png"
+                 class="img-fluid">
+        </div>
+        <div class="p-5 bg-white border text-center">
+            <img src="assets/images/clients/client-3.png"
+                 class="img-fluid">
+        </div>
+        <div class="p-5 bg-white border text-center">
+            <img src="assets/images/clients/client-4.png"
+                 class="img-fluid">
+        </div>
+    </div>
+    <div class="d-md-flex flex-md-row flex-sm-column mx-md-5 px-md-5">
+        <div class="p-5 bg-white border text-center">
+            <img src="assets/images/clients/client-5.png"
+                 class="img-fluid">
+        </div>
+        <div class="p-5 bg-white border text-center">
+            <img src="assets/images/clients/client-6.png"
+                 class="img-fluid">
+        </div>
+        <div class="p-5 bg-white border text-center">
+            <img src="assets/images/clients/client-7.png"
+                 class="img-fluid">
+        </div>
+        <div class="p-5 bg-white border text-center">
+            <img src="assets/images/clients/client-8.png"
+                 class="img-fluid">
+        </div>
+    </div>
+</div>
+<!-- end clients section -->
+<!-- start contact us section -->
+<div class="row mt-4">
+    <div class="col-md-12 col-sm-12 my-4">
+        <h4 class="text-center display-4 my-5 font-weight-bold">{{'contact.title' | translate}}</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-sm-12 p-3 map">
+        <app-map></app-map>
+    </div>
+    <div class="col-md-6 col-sm-12 p-3 pr-4">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <p class="text-center">
+                    <img src="assets/images/icon/location.png"
+                         width="30">
+                    <small>A108 Adam Street, NY 535022</small>
+                </p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <p class="text-center">
+                    <img src="assets/images/icon/mail.png"
+                    class="mr-2"
+                         width="30">
+                  <small>info@example.com</small>
+                </p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <p class="text-center">
+                    <img src="assets/images/icon/phone.png"
+                         width="30">
+                   <small> +1 5589 55488</small>
+                </p>
+            </div>
+        </div>
+        <form [formGroup]="form">
+
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="form-group " [class.has-error]="!form.controls['name'].valid && form.controls['name'].dirty">
+                        <input type="text"
+                               class="form-control"
+                               name="name"
+                               formControlName="name"
+                               placeholder="{{'shared.place-holder.name'|translate}}">
+                               <div class="text-danger" *ngIf="!form.controls['name'].valid && form.controls['name'].touched">
+                                <div *ngIf="form.controls['name'].hasError('required')">{{'shared.validation.required'|translate}}</div>
+                                <div *ngIf="form.controls['name'].hasError('minlength')">{{'shared.validation.min-length'|translate}}</div>
+                                <div *ngIf="form.controls['name'].hasError('maxLength')">{{'shared.validation.max-length-20'|translate}}</div>
+                              </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="form-group " [class.has-error]="!form.controls['email'].valid && form.controls['email'].dirty">
+                        <input type="text"
+                               class="form-control"
+                               name="email"
+                               formControlName="email"
+                               placeholder="{{'shared.place-holder.email'|translate}}">
+                        <div class="text-danger"
+                             *ngIf="!form.controls['email'].valid && form.controls['email'].touched">
+                            <div *ngIf="form.controls['email'].hasError('required')">
+                                {{'shared.validation.required'|translate}}</div>
+                            <div *ngIf="form.controls['email'].hasError('maxLength')">
+                                {{'shared.validation.max-length-20'|translate}}</div>
+                            <div *ngIf="form.controls['email'].hasError('pattern')">
+                                {{'shared.validation.correct-email'|translate}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group " [class.has-error]="!form.controls['subject'].valid && form.controls['subject'].dirty">
+                        <input type="text"
+                               class="form-control"
+                               name="subject"
+                               formControlName="subject"
+                               placeholder="{{'shared.place-holder.subject'|translate}}">
+                               <div class="text-danger" *ngIf="!form.controls['subject'].valid && form.controls['subject'].touched">
+                                <div *ngIf="form.controls['subject'].hasError('required')">{{'shared.validation.required'|translate}}</div>
+                                <div *ngIf="form.controls['subject'].hasError('maxLength')">{{'shared.validation.max-length'|translate}}</div>
+                              </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group " [class.has-error]="!form.controls['message'].valid && form.controls['message'].dirty">
+                        <textarea  type="text"
+                               class="form-control"
+                               name="message"
+                               formControlName="message"
+                               placeholder="{{'shared.place-holder.message'|translate}}"></textarea>
+                               <div class="text-danger" *ngIf="!form.controls['message'].valid && form.controls['message'].touched">
+                                <div *ngIf="form.controls['message'].hasError('required')">{{'shared.validation.required'|translate}}</div>
+                                <div *ngIf="form.controls['message'].hasError('maxLength')">{{'shared.validation.max-length'|translate}}</div>
+                              </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 mx-auto">
+                    <button type="button"
+                    [disabled]="!form.valid"
+                            class="btn btn-primary btn-rounded mx-md-4 mt-sm-2  px-5"
+                            >{{'contact.btn' | translate}}</button>
+                   
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<!-- end contact us section -->
+

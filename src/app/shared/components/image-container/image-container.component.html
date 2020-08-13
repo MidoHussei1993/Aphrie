@@ -1,0 +1,19 @@
+<img [src]="imageURL" />
+<div class="overlay text-center">
+    <p class="text-center text-white">{{'protfolio.projects.2' | translate}}</p>
+    <button type="button"
+            class="btn btn-primary btn-circle mx-3"
+            (click)="viewImage()">
+        <img src="assets/images/icon/view.png"
+             alt="eye photo"
+             class="d-inline p-1">
+    </button>
+    <button type="button"
+            (click)="openImage()"
+            class="btn btn-primary btn-circle mx-3">
+        <img src="assets/images/icon/expand.png"
+             alt="expand file photo"
+             class="d-inline p-1">
+
+    </button>
+</div>

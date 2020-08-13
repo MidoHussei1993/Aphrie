@@ -1,0 +1,107 @@
+{
+  "header": ["Home", "About Us", "Protfolio", "Team", "Contact Us"],
+  "intro": {
+    "title": ["We provide", "solutions", "for your business"],
+    "btn": {
+      "start": "Get Started",
+      "services": "Our Services"
+    }
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "paragraph": "professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage ",
+    "section1": {
+      "paragraph": "Is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is tha.",
+      "list": {
+        "Elusmod Tempor": "t is a long established fact that int of using Lorem Ipsum is that it has a more-or-less normal distribution ",
+        "Magni Dolores": "t is a long established fact that int of using Lorem Ipsum is that it has a more-or-less normal distribution ",
+        "Dolor Sitema": "t is a long established fact that int of using Lorem Ipsum is that it has a more-or-less normal distribution "
+      }
+    },
+    "section2": {
+      "title": "Is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "paragraph": [
+        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.",
+        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock."
+      ]
+    },
+    "section3": {
+      "title": "Is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "paragraph": [
+        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.",
+        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.",
+        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock."
+      ]
+    }
+  },
+  "precedence": {
+    "title": "Why chosse us?",
+    "paragraph": "professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage ",
+    "advantages": {
+      "Corporis dolorem": "t is a long established fact that int of using Lorem Ipsum is that it has a more-or-less normal distribution ",
+      "Voluptates dolores": "t is a long established fact that int of using Lorem Ipsum is that it has a more-or-less normal distribution ",
+      "Eum ut aspernatur": "t is a long established fact that int of using Lorem Ipsum is that it has a more-or-less normal distribution "
+    },
+    "read-more": "Read more",
+    "clients": "Clients",
+    "projects": "Projects",
+    "hours-of-supporrt": "Hours Of Supporrt",
+    "hard-workers": "Hard Workers"
+  },
+  "protfolio": {
+    "title": "Our Protfolio",
+    "btn": ["ALL", "APP", "CARD", "WEB"],
+    "projects":["web" , "card" , "app"]
+  },
+  "testimonials":{
+    "title":"Testimonials",
+    "text":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock."
+  },
+  "team": {
+    "title": "Team",
+    "paragraph": "professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage "
+  },
+  "clients":{
+    "title":"Our Clients",
+    "paragraph": "professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage "
+  },
+  "contact":{
+    "title":"Contact Us",
+    "btn": "Send Message"
+  },
+  "shared":{
+    "place-holder":{
+      "name":"Your Name",
+      "email":"Your Email",
+      "subject":"Subject",
+      "message":"Message"
+    },
+    "validation": {
+      "required": "This filed is required.",
+      "min-length": "minimum length is 3 characters.",
+      "max-length": "maximum length is 100 characters.",
+      "password-min-length": "minimum length of password is 6 characters",
+      "password-max-length": "maximum length of password is 20 characters",
+      "arabic-letters": "ONLY arabic letters ",
+      "english-letters": "ONLY english letters ",
+      "correct-email": "Not valid email"
+    }
+  },
+  "footer": {
+    "titles":["WELCOME" , "USEFUL LINKS" , "CONTACT US" , "OUR NEWSLTTER"],
+    "welcome-paragraph": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+    "links":["Home" , "About Us" , "Services" , "Terms of service" , "Privacy policy"],
+    "newsltter-paragraph": "professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage ",
+    "newsltter-btn":"Subscribe",
+    "copy-right": "Copyright.All Rights reserved",
+    "contact-us":{
+      "address":["A108 Adam Street"," New York, NY 535022"," United States"],
+      "info": {
+        "Email": "info@example.com",
+        "Phone": "+1 5589 55488 55"
+      }
+    },
+    "copyright":"Copyright . All Rights reserved"
+  }
+}
+
